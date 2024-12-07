@@ -1,5 +1,5 @@
 {
-  "name": "payload-vercel-website-template",
+  "name": "payload-portal",
   "version": "1.0.0",
   "description": "Website template for Payload",
   "license": "MIT",
@@ -7,7 +7,6 @@
   "scripts": {
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "ci": "payload migrate && pnpm build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
@@ -20,7 +19,6 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@payloadcms/db-vercel-postgres": "latest",
     "@payloadcms/live-preview-react": "latest",
     "@payloadcms/next": "latest",
     "@payloadcms/payload-cloud": "latest",
@@ -30,7 +28,6 @@
     "@payloadcms/plugin-search": "latest",
     "@payloadcms/plugin-seo": "latest",
     "@payloadcms/richtext-lexical": "latest",
-    "@payloadcms/storage-vercel-blob": "latest",
     "@payloadcms/ui": "latest",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-label": "^2.0.2",
@@ -53,7 +50,8 @@
     "react-hook-form": "7.45.4",
     "sharp": "0.32.6",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@payloadcms/db-vercel-postgres": "latest"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.0.4",
